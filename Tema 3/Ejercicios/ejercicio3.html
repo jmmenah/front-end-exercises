@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>u3e3_formatofecha - Juan Manuel Mena Hernandez</title>
+</head>
+<body>
+    <h1 id="reloj">Hora</h1>
+    <script>
+        tipo = prompt("Elige el tipo de formato 1-dd/mm/yy 2-Dia, dd de mm del yy o 3- Day, Month dd,  yy ");
+        if(tipo==1){
+            let fecha=new Date(Date.now()).toLocaleDateString();
+            document.getElementById("reloj").innerHTML = fecha;
+        }
+        if(tipo==2){
+            let fecha=new Date(Date.now());
+            let dia = fecha.getDate();
+            let mes = fecha.getMonth();
+            let año = fecha.getFullYear();
+            let diaS = fecha.getDay();
+
+            const diaNombres = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+            const mesNombres = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+            string = diaNombres[diaS] + ", " + dia + " de " + mesNombres[mes] + " del " + año;
+            document.getElementById("reloj").innerHTML= string;
+
+        }else{
+            let fecha=new Date(Date.now());
+            let dia = fecha.getDate();
+            let mes = fecha.getMonth();
+            let año = fecha.getFullYear();
+            let diaS = fecha.getDay();
+
+            const dayNames = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+            const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+            string = dayNames[diaS] + ", " + monthNames[mes] + " " + dia + ", " + año;
+            document.getElementById("reloj").innerHTML= string;
+        }
+        
+    </script>
+</body>
+</html>

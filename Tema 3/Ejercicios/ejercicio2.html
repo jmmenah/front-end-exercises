@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>u3e2_domingos - Juan Manuel Mena Hernandez</title>
+</head>
+<body>
+    <h1 id="dias">Dias que tu cumpleaños es domingo</h1>
+    <script>
+        let mes = prompt("Introduce el mes de tu cumpleaños : ")-1;
+        let dia = prompt("Introduce el dia de tu cumpleaños : ");
+        for(i=2020;i<=2100;i++){
+            let fecha=new Date(i,mes,dia);
+            if(fecha.getDay()==0){
+                document.write(i+"\n");
+            }
+        }
+    </script>
+</body>
+</html>

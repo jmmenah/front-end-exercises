@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 8</title>
+    <script>
+        //ejercicio 8
+        //Juan Manuel Mena Hernández
+        let paises = ["España", "Francia", "USA", "Japon", "Italia"];
+        function vaciar () { 
+            document.getElementById("n1").value = "";
+        }
+
+        function numero() { 
+            let texto = document.getElementById("n1");
+            texto.value = paises.length;
+        }
+
+        function mostrarPaises() { 
+            let texto = document.getElementById("n1");
+            texto.value = paises;
+        }   
+
+        function mostrarPaisesInv() { 
+            let texto = document.getElementById("n1");
+            texto.value = paises.reverse();
+        }
+
+        function mostrarPaisesOrd() { 
+            let texto = document.getElementById("n1");
+            texto.value = paises.sort();
+        }
+
+        function añadirPaisPrin() { 
+            let texto = document.getElementById("n1");
+            paises.unshift(texto.value);
+            console.log(paises);
+        }
+
+        function añadirPaisFin() { 
+            let texto = document.getElementById("n1");
+            paises.push(texto.value);
+            console.log(paises);
+        }
+
+        function borrarUltPais() { 
+            let texto = document.getElementById("n1");
+            texto.value = paises.shift();
+        }
+
+        function borrarUltPais() { 
+            let texto = document.getElementById("n1");
+            texto.value = paises.pop();
+        }
+
+        function mostrarPais() { 
+            let texto = document.getElementById("n1");
+            texto.value = paises[texto.value];
+        }
+
+        function buscarPais() { 
+            let texto = document.getElementById("n1");
+            texto.value = paises.indexOf(texto.value);
+        }
+    </script>
+</head>
+<body>
+Respuesta:
+<input type="text" id="n1" 
+     onclick="vaciar()">
+
+<button onclick="numero()">
+    Numero de Paises 
+</button>
+<button onclick="mostrarPaises()">
+    Paises 
+</button>
+<button onclick="mostrarPaisesInv()">
+    Paises al reves
+</button>
+<button onclick="mostrarPaisesOrd()">
+    Paises ordenados
+</button>
+<button onclick="añadirPaisPrin()">
+    Añadir Pais Primero
+</button>
+<button onclick="añadirPaisFin()">
+    Añadir Pais Ultimo
+</button>
+<button onclick="borrarUltPais()">
+    Borrar Primer Pais
+</button>
+<button onclick="borrarUltPais()">
+    Borrar Ultimo Pais
+</button>
+<button onclick="mostrarPais()">
+    Mostrar Pais
+</button>
+<button onclick="buscarPais()">
+    Buscar Pais
+</button>
+</body>
+</html>

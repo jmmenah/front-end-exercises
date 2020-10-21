@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>u1e3_comparacion</title>
+</head>
+<body>
+    <script>
+        //u1e3_comparacion
+        //Juan Manuel Mena Hernández
+		operacion1 = 10 == 10;
+		alert("La operacion 10 == 10 es "+operacion1); //Son iguales
+		operacion2 = 10 === 10;
+		alert("La operacion 10 === 10 es "+operacion2); //Son estrictamente iguales
+		operacion3 = 10 === 10.0;
+		alert("La operacion 10 === 10.0 es "+operacion3); //Los interpreta a ambos como enteros y son estrictamente iguales
+		operacion4 = "Laura" == "laura";
+		alert("La operacion \"Laura\" == \"laura\" es "+operacion4); // Son distintos por la L l
+		operacion5 = "Laura" > "laura";
+		alert("La operacion \"Laura\" > \"laura\" es "+operacion5); //Transforma caracteres en numeros y da el resultado
+		operacion6 = "Laura" < "laura";
+		alert("La operacion \"Laura\" < \"laura\" es "+operacion6); //Transforma caracteres en numeros y da el resultado
+		operacion7 = "123" == 123;
+		alert("La operacion \"123\" == 123 es "+operacion7); //Son iguales ya que no tienen que ser estrictamente iguales
+		operacion8 = "123" === 123;
+		alert("La operacion \"123\" === 123 es "+operacion8); //Son distintos al ser string y entero
+		operacion9 = parseInt("123") === 123;
+		alert("La operacion parseInt(\"123\") === 123 es "+operacion9); //Son iguales al pasar el string a entero
+
+    </script>
+</body>
+</html>

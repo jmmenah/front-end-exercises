@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>u3e4_formatohoras - Juan Manuel Mena Hernandez</title>
+</head>
+<body>
+    <h1 id="reloj">Hora</h1>
+    <script>
+        tipo = prompt("Elige el tipo de formato 1-Digital 2-AM/PM ");
+        function digital(){
+            let fechaHora =new Date(Date.now());
+            let horas = fechaHora.getHours();
+            let minutos = fechaHora.getMinutes();
+            let segundos = fechaHora.getSeconds();
+
+            if(horas < 10) { horas = '0' + horas; }
+            if(minutos < 10) { minutos = '0' + minutos; }
+            if(segundos < 10) { segundos = '0' + segundos; }
+            document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos;
+        }
+        function amPm(){
+            let fechaHora =new Date(Date.now());
+            let horas = fechaHora.getHours();
+            let minutos = fechaHora.getMinutes();
+            let segundos = fechaHora.getSeconds();
+
+            let sufijo = ' am';
+            if(horas > 12) {
+                horas = horas - 12;
+                sufijo = ' pm';
+            }
+
+            if(horas < 10) { horas = '0' + horas; }
+            if(minutos < 10) { minutos = '0' + minutos; }
+            if(segundos < 10) { segundos = '0' + segundos; }
+            document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos+sufijo;
+        }
+        if(tipo==1){
+            digital();
+        }
+        else{
+            amPm();
+            }
+    </script>
+</body>
+</html>

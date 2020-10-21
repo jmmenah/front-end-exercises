@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>u3e1_fincurso - Juan Manuel Mena Hernandez</title>
+</head>
+<body>
+    <h1 id="dias">Hola</h1>
+    <script>
+        let fincurso = new Date('2021-06-24T00:00:00').getTime();
+        let hoy = Date.now();
+        let timeDifference = fincurso - hoy;
+        let days = Math.floor(timeDifference / (1000 * 3600 * 24));
+        document.getElementById("dias").innerHTML = "Quedan "+days+" para fin de curso.";
+    </script>
+</body>
+</html>

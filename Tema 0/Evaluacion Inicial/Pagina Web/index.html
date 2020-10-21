@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Concurso de Aves</title>
+	<script src="javascript/function.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+	<div id="menu">
+		<ul class="nav">
+			<li><a href="#"><img src="imagenes/logo.png"></a></li>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="#" onclick="comite();">Comite Organizador</a></li>
+			<li><a href="#" onclick="calendario();">Calendario</a></li>
+			<li><a href="#" onclick="contacto();">Contacto</a></li>
+		</ul>
+	</div>
+	<div id="inicio" style="display: block;">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a porta nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam vitae aliquet orci. Sed urna nulla, vulputate et neque accumsan, vulputate dignissim erat. Nunc tortor orci, gravida in risus quis, lacinia laoreet massa. Nulla vel nisi orci. Sed ac ornare enim. Fusce porttitor nibh massa, at ultricies felis tristique et. Cras id orci vehicula, vulputate sapien eu, pretium elit. Ut ut suscipit ante. Proin sed tristique nunc. Proin efficitur, sem ac varius auctor, ipsum magna ullamcorper lorem, et condimentum magna erat vel erat. Vestibulum in efficitur orci. Ut finibus dui vitae diam imperdiet dignissim.Nulla facilisi. Duis dignissim suscipit quam, ut rutrum magna consectetur ut. Sed vitae sodales odio. Vestibulum vitae quam libero. In erat elit, posuere vel sagittis at, lobortis at metus. Ut eleifend nisi in felis scelerisque, sit amet fringilla leo blandit. Donec ornare imperdiet egestas. Morbi vel est consequat, aliquam elit ut, volutpat magna. Mauris convallis eleifend libero, id semper neque. Aenean et sollicitudin lacus. Proin vel aliquam massa, sit amet iaculis metus. In at neque massa.</p>
+		<p>Sed pharetra risus vel mi rutrum, in tincidunt odio consectetur. Praesent vel mauris gravida, convallis ante non, malesuada neque. Nunc a pretium felis. Nam auctor nibh sit amet sodales ullamcorper. In quis nisi in nisi maximus fringilla. Ut sollicitudin blandit pretium. Morbi nibh quam, feugiat quis felis id, venenatis euismod nisl. Vestibulum dictum eleifend lacus, a scelerisque orci. Phasellus quis ultrices neque. Fusce justo lacus, luctus a nisi vel, blandit imperdiet diam.</p>
+		</p>Fusce tellus nibh, venenatis non elit at, egestas luctus nisl. Aenean dui velit, dictum eget porttitor non, varius id leo. Nullam ex diam, ornare ac suscipit vitae, auctor ac augue. Quisque metus velit, lobortis vitae blandit non, sagittis non orci. Integer condimentum justo elit, eget imperdiet leo maximus sed. Nunc porta elementum sagittis. Quisque auctor mi tortor, eu rhoncus nisl mollis ac. Maecenas tortor eros, pretium at orci eget, lobortis blandit dui. Sed sed dolor at nibh rutrum gravida. Duis ultricies convallis dolor sed blandit. Ut tempus, velit quis convallis ultrices, tellus nibh congue nisi, in dignissim odio massa id lectus. Donec eget dictum eros. Cras ut lorem consequat, tincidunt elit eget, bibendum justo. Nam feugiat eros est, quis placerat urna imperdiet nec. Ut dictum sem vel magna maximus luctus.</p>
+	</div>
+	<div id="calendario" style="display: none;">
+		<p>19 Octubre. Fecha limite de entrega de solicitudes</p>
+		<p>30 Octubre. Valoracion del jurado</p>
+		<p>2 Noviembre. Entrega de premios</p>
+	</div>
+	<div id="comiteorganizador" style="display: none;">
+		<img src="imagenes/comite.jpg" alt="comite" id="comite1">
+		<p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a porta nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam vitae aliquet orci. Sed urna nulla, vulputate et neque accumsan, vulputate dignissim erat. Nunc tortor orci, gravida in risus quis, lacinia laoreet massa. Nulla vel nisi orci. Sed ac ornare enim.</p>
+		<img src="imagenes/comite.jpg" alt="comite" id="comite2">
+		<p id="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a porta nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam vitae aliquet orci. Sed urna nulla, vulputate et neque accumsan, vulputate dignissim erat. Nunc tortor orci, gravida in risus quis, lacinia laoreet massa. Nulla vel nisi orci. Sed ac ornare enim.</p>
+		<img src="imagenes/comite.jpg" alt="comite" id="comite3">
+		<p id="p3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a porta nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam vitae aliquet orci. Sed urna nulla, vulputate et neque accumsan, vulputate dignissim erat. Nunc tortor orci, gravida in risus quis, lacinia laoreet massa. Nulla vel nisi orci. Sed ac ornare enim.</p>
+	</div>
+	<form id="contacto" style="display: none;">
+			<ul>
+				<li>
+					<label for="name">Nombre:</label>
+			    	<input type="text" id="name" name="user_name">
+				</li>
+				<li>
+					<label for="mail">Correo electrónico:</label>
+					<input type="email" id="mail" name="user_mail">
+				</li>
+				<li>
+					<label for="msg">Mensaje:</label>
+					<textarea id="msg" name="user_message" value="Cuéntanos tu problema..."></textarea>
+				</li>
+			</ul>
+			<ul>
+				<li class="button">
+					<button type="submit">Enviar</button>
+				</li>
+			</ul>
+	</form>
+	<div id="galeria">
+		  <img class="slide" src="imagenes/ganardor1_b.jpg" alt="ganador1" style="width: 100%; display: block;">
+		  <img class="slide" src="imagenes/ganardor2_b.jpg" alt="ganador2" style="width: 100%; display: none;">
+		  <img class="slide" src="imagenes/ganardor3_b.jpg" alt="ganador3" style="width: 100%; display: none;">
+		  <img class="slide" src="imagenes/ganardor4_b.jpg" alt="ganador4" style="width: 100%; display: none;">
+		  <img class="slide" src="imagenes/ganardor5_b.jpg" alt="ganador5" style="width: 100%; display: none;">
+		  <img class="slide" src="imagenes/ganardor6_b.jpg" alt="ganador6" style="width: 100%; display: none;">
+
+
+		  <button class="display-left" onclick="plusDivs(-1);">&#10094;</button>
+		  <button class="display-right" onclick="plusDivs(1);">&#10095;</button>
+	</div>
+	<div id="pie">
+    <footer>
+        <p>¿Quiénes somos?</p>
+        <p>Contáctanos</p>
+        <p>Términos y condiciones</p>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo-2.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo-3.css">
+    </footer>
+</div>
+</body>
+</html>

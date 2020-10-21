@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+h2{
+    font-family: monospace;
+    font-size: 20px;
+}
+h3{
+    font-family: arial ;
+    font-size: 15px;
+}
+button{
+	background-color:#ffff;
+	color:black;
+	text-decoration:none;
+	padding:10px 10px;
+	font-family: monospace;
+	opacity: 85%;
+    border: 0;
+}
+button:hover{
+    color: red;
+}
+button:active{
+    color: yellow;
+}
