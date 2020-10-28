@@ -1,0 +1,71 @@
+
+<!doctype html><html><head><meta charset="utf-8">
+    <script type="text/javascript">
+        // MODELO
+        var peliculas = [
+            {titulo: "Superlópez",   director: "Javier Ruiz Caldera", estreno: "2018"},
+            {titulo: "E.T.",         director: "Steven Spielberg",    estreno: "1982"},
+            {titulo: "Interstellar", director: "Christopher Nolan",   estreno: "2014"}
+        ];
+
+        // VISTAS
+        function indexView (pelis) {
+            var    i=0,   html = "<ul>";
+            while(i < pelis.length) {
+              html = html + `<li id="show" data-my-id="${i}"> ${pelis[i].titulo}</li><button id="delete" data-my-id="${i}">Borrar</button>`;
+              i = i + 1;
+            };
+            return html + `</ul> <button id="new">Crear</button>`;
+        };
+
+        function showView (peli) {
+            return `
+            La película <b> ${peli.titulo}</b>, estrenada
+            en el año <b> ${peli.estreno}</b>, fue
+            dirigida por <b> ${peli.director}</b>.
+            
+            <p><button id="index"> Volver </button></p>`
+        }
+        function newView () {
+            return `Introducir nueva pelicula: <input type="text" id="nombre"><br>
+            Introducir año de estreno: <input type="text" id="año"><br>
+            Introducir nombre del director: <input type="text" id="director"><br>
+            <button id="create">Añadir</button>`
+        };
+        
+
+        // CONTROLADORES
+        function indexContr() { document.getElementById("main").innerHTML = indexView(peliculas);};
+        function showContr(i) { document.getElementById("main").innerHTML = showView(peliculas[i]);};
+        function newContr() { document.getElementById("main").innerHTML = newView();};
+        function deleteContr(i) {
+            peliculas.splice(i,1);
+            indexContr();
+        };
+        function createContr() {
+            nombre=document.getElementById("nombre").value;
+            año=document.getElementById("año").value;
+            director=document.getElementById("director").value;
+            peli = {titulo: nombre,   director: director, estreno: año}
+            peliculas.push(peli);
+            indexContr();
+        };
+        
+        // EVENTOS
+        document.addEventListener('DOMContentLoaded', ev => indexContr());
+        document.addEventListener('click', ev => {
+            if      (ev.target.matches('#index')) indexContr();
+            else if (ev.target.matches('#show'))  showContr(ev.target.dataset.myId);
+            else if (ev.target.matches('#delete')) deleteContr(ev.target.dataset.myId);
+            else if (ev.target.matches('#create')) createContr();
+            else if (ev.target.matches('#new'))    newContr();
+        })
+    </script>
+</head>
+<body>
+    <h1> Mis películas </h1>
+    <div id="main"></div>
+</body>
+</html>
+
+
