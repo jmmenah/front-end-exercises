@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html><head><title>Ejercicio 14</title><meta charset="utf-8">
+  <script type="text/javascript">
+
+    document.addEventListener('click', ev => {
+      if      (ev.target.matches('#n1')) vaciar();
+      else if (ev.target.matches('#b1')) calculos();
+    })
+
+    function vaciar (){
+      document.getElementById('n1').value = "";
+    }
+
+    function calculos (){ 
+      let num = document.getElementById('n1').value;
+      let exponencial = Number.parseFloat(num).toExponential(2);
+      let decimales = Number(num).toFixed(4);
+      let binario = Number.parseInt(num, 10).toString(2);
+      let octal = Number.parseInt(num, 10).toString(8);
+      let hexadecimal = Number.parseInt(num, 10).toString(16);
+      document.write("<p>"+num+" / "+exponencial+" / "+decimales+" / "+binario+" / "+octal+" / "+hexadecimal+"</p>");
+    }
+  </script>
+</head><body>
+  Introduce un numero :
+  <input type="text" id="n1">
+
+  <button id="b1"> Calculos </button>
+</body>
+</html>

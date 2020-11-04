@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html><head><title>Ejercicio 12</title><meta charset="utf-8">
+  <script type="text/javascript">
+    
+    document.addEventListener('click', ev => {
+      if      (ev.target.matches('#n1')) vaciar();
+      else if (ev.target.matches('#b1')) eleccion();
+    })
+
+    function vaciar (){
+      document.getElementById('n1').value = "";
+    }
+
+    function eleccion (){ 
+      let elec = document.getElementById('n1').value;
+      if(elec==1){
+        document.write('<input type="text" id="pottex">');
+        document.write('<button id="pot" onclick="potencia()"> Potencia </button>');
+      }
+      else if (elec==2){
+        document.write('<input type="text" id="sqrttex">');
+        document.write('<button id="sqrt" onclick="raiz()"> Raiz </button>');  
+      }
+      else if (elec==3){
+        document.write('<input type="text" id="roundtex">');
+        document.write('<button id="round" onclick="redondeo()"> Redondeo </button>'); 
+      }
+      else if (elec==4){
+        document.write('Introduce un angulo:<input type="text" id="angultex">');
+        document.write('<button id="angul" onclick="angulos()"> Trigonometria </button>'); 
+      }
+    }
+    function potencia(){
+        let numeros = document.getElementById("pottex").value.split(",");
+        let pot = Math.pow(Number.parseInt(numeros[0]),Number.parseInt(numeros[1]));
+        document.write("<p>"+pot+"</p>");
+    }
+    function raiz(){
+        let raiznum = Math.sqrt(document.getElementById('sqrttex').value);
+        document.write('<p>La raiz es '+raiznum+'</p>');
+    }
+    function redondeo(){
+        let num = document.getElementById('roundtex').value;
+        let min = Math.floor(Number.parseFloat(num));
+        let max = Math.ceil(Number.parseFloat(num));
+        document.write("<p>"+min+" / "+max+"</p>");
+    }
+    function angulos(){
+        let angulo = document.getElementById('angultex').value;
+        let seno = Math.sin(angulo);
+        let coseno = Math.cos(angulo);
+        let tangente = Math.tan(angulo);
+        document.write("<p>"+seno+" / "+coseno+" / "+tangente+"</p>");
+    }
+  </script>
+</head><body>
+  Elige opcion (1 - 4) :
+  <input type="text" id="n1">
+  <button id="b1"> Calculos </button>
+</body>
+</html>

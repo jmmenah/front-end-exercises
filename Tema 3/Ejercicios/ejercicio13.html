@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html><head><title>Ejercicio 13</title><meta charset="utf-8">
+  <script type="text/javascript">
+
+    document.addEventListener('click', ev => {
+      if      (ev.target.matches('#n1')) vaciar();
+      else if (ev.target.matches('#b1')) calculos();
+    })
+
+    function vaciar (){
+      document.getElementById('n1').value = "";
+    }
+
+    function calculos (){ 
+      let radio = document.getElementById('n1').value;
+      let diametro = radio * 2;
+      let perimetro = diametro * Math.PI;
+      let areacir = Math.PI * radio * radio;
+      let areaes = 4 * Math.PI * radio * radio;
+      let volumen = 4/3 * Math.PI * radio * radio * radio;
+      document.write("<p>"+radio+" / "+diametro+" / "+perimetro+" / "+areacir+" / "+areaes+" / "+volumen+"</p>");
+    }
+  </script>
+</head><body>
+  Introduce un radio :
+  <input type="text" id="n1">
+
+  <button id="b1"> Calculos </button>
+</body>
+</html>
