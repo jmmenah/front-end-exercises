@@ -1,6 +1,6 @@
         //Contedor
         let inicial = JSON.stringify([
-            {nombre: "Electroviral", cantante: "Supersubmarina", año: "2011", tipo: "indie", localizacion: "5",prestado:"Si"},
+            {nombre: "Electroviral", cantante: "Supersubmarina", año: "2011", tipo: "indie", localizacion: "5",prestado:"Si",fecha:(Date.now()-290200000)},
         ]);
         localStorage.setItem('discos', localStorage.getItem('discos') || inicial);
         // MODELO
@@ -77,7 +77,7 @@
             localStorage.setItem('discos', JSON.stringify(discos));
             indexContr();
             let pantalla=document.getElementById("pantalla");
-                pantalla.innerHTML="Disco Borrado";
+                pantalla.innerHTML="Disco borrado";
                 pantalla.style="color:black";
         };
         function createContr() {
@@ -93,7 +93,7 @@
                     break;
                 }
             }
-            prestados=document.querySelectorAll('input[name="prestamo"]');
+            let prestados=document.querySelectorAll('input[name="prestamo"]');
             let selectedPrestado;
             for (const prestado of prestados) {
                 if (prestado.checked) {
@@ -102,15 +102,16 @@
                 }
             }
             
+            
             if( campo20(cantante) || campo20(nombre) || añoComp(año) ||locComp(localizacion)){
                 
             }else{
-            disco = {nombre: nombre, cantante: cantante, año: año, tipo: selectedTipo, localizacion: localizacion,prestado: selectedPrestado};
+            disco = {nombre: nombre, cantante: cantante, año: año, tipo: selectedTipo, localizacion: localizacion,prestado: selectedPrestado, fecha:Date.now()};
             discos.push(disco);
             localStorage.setItem('discos', JSON.stringify(discos));
             indexContr();
             let pantalla=document.getElementById("pantalla");
-            pantalla.innerHTML="Disco Creado";
+            pantalla.innerHTML="Disco creado";
             pantalla.style="color:black";
             }
         };
@@ -123,14 +124,19 @@
                 discos[i].prestado="Si";
                 localStorage.setItem('discos', JSON.stringify(discos));
                 let pantalla=document.getElementById("pantalla");
-                pantalla.innerHTML="Disco Prestado";
+                pantalla.innerHTML="Disco prestado";
                 pantalla.style="color:black";
+                discos[i].fecha =Date.now();
             }
         }
         function devolverContr(i){
             if(discos[i].prestado=="Si"){
                 let pantalla=document.getElementById("pantalla");
-                pantalla.innerHTML="Disco devuelto";
+                if(Date.now()-discos[i].fecha>259200000){
+                    pantalla.innerHTML="Disco devuelto con retraso";
+                }else{
+                    pantalla.innerHTML="Disco devuelto";
+                }
                 discos[i].prestado="No";
                 pantalla.style="color:black";
                 localStorage.setItem('discos', JSON.stringify(discos));
