@@ -78,7 +78,7 @@ function reintegroView(i){
 function movimientosView (cuenta) {
     let    i=0,   html = "<h2>Movimientos</h2><ol>";
     while(i < cuenta.movimientos.length) {
-      html = html + `<li id="show" data-my-id="${i}"> ${cuenta.movimientos[i].fecha}, ${cuenta.movimientos[i].tipo}, ${cuenta.movimientos[i].importe}, ${cuenta.movimientos[i].saldo}</li>`;
+      html = html + `<li id="movimiento" data-my-id="${i}"> ${cuenta.movimientos[i].fecha}, ${cuenta.movimientos[i].tipo}, ${cuenta.movimientos[i].importe}, ${cuenta.movimientos[i].saldo}</li>`;
       i = i + 1;
     };
     return html + `</ol><button type="submit" id="back">Volver</button>`;
