@@ -1,0 +1,69 @@
+#app, #menu {
+
+    height: auto;
+    width: 90%;
+    
+    display: flex;
+    
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+}
+
+div {
+
+    width: 20%;
+
+    height: 90px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+
+}
+
+.elemento {
+
+    border: 1px solid green;
+
+
+}
+
+#menu button {
+
+    padding: 5px;
+
+    margin: 10px 5px;
+
+}
+
+p {
+    font-size: 17px;
+    text-align: center;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+p div {
+    width: 100%;
+}
+
+.red {
+
+    background-color: red;
+
+}
+
+.white {
+    background-color: white;
+}

@@ -12,7 +12,7 @@
         function indexView (pelis) {
             var    i=0,   html = "<ul>";
             while(i < pelis.length) {
-              html = html + `<li id="show" data-my-id="${i}"> ${pelis[i].titulo}<button id="delete" data-my-id="${i}">Borrar</button></li>`;
+              html = html + `<li id="show" data-my-id="${i}"> ${pelis[i].titulo}</li><button id="delete" data-my-id="${i}">Borrar</button>`;
               i = i + 1;
             };
             return html + `</ul> <button id="new">Crear</button>`;
