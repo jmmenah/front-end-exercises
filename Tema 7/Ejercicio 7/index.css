@@ -1,0 +1,25 @@
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+#directorTD {
+    font-style: italic;
+}
+
+#tituloTD {
+    font-weight: bold;
+}
+
+.rojo {
+    color: red;
+}
+
+.amarillo {
+    color: yellow;
+}
+
+.verde {
+    color: green;
+}

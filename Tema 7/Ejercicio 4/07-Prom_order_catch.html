@@ -1,0 +1,26 @@
+
+<!DOCTYPE html><html><head></head>
+<body>
+	<script type="text/javascript">
+
+		const prom = () => 
+			new Promise((resolve,reject)=>{
+				document.write(" E1");
+				reject();
+			})
+
+		const start = async () => {			
+			try {
+				document.write(" E2");
+				await prom();
+				document.write(" E3");
+			} catch (err) {
+				document.write(" E4");
+			}
+		}
+
+		start();
+		document.write(" E5");
+	</script>
+</body></html>
+

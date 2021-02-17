@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head><meta charset="UTF-8"></head>
+  <body>
+  	<div id="i1"></div>
+		<div id="i2"></div>
+
+		<script type="text/javascript">
+      function show (id, msj) { 
+				document.getElementById(id).innerHTML = msj; 
+			};
+
+			try {
+				if (Math.random() < 0.5) { throw "HAY EXCEPCIÓN"; }
+        show("i1", "NO ha ocurrido excepción");
+			} catch (e) {
+				show("i1", e);
+			} finally {
+				show("i2", "Fin del programa");
+			}
+	  </script>
+  </body>
+</html>

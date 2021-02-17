@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getTime(){
+            let date = Date.now();
+            let myPromise = new Promise(function(resolve, reject) {
+
+                try{
+                    resolve(document.write(new Date(date)));
+                } catch {
+                    reject("Error");
+                }
+        });
+        }
+        window.setInterval(function(){
+            document.body.innerHTML = '';
+            getTime();
+        }, 1000);
+    </script>
+</body>
+</html>

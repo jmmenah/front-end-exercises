@@ -1,0 +1,43 @@
+ [{
+    "Titulo": "La casa de papel",
+    "Cadena": "Netflix",
+    "Director": "Álex Rodrigo",
+    "Año": "2017",
+    "Terminada": "No"
+  },
+  {
+    "Titulo": "Juego de Tronos",
+    "Cadena": "HBO",
+    "Director": "David Benioff",
+    "Año": "2011",
+    "Terminada": "No"
+  },
+  {
+    "Titulo": "Breaking Bad",
+    "Cadena": "AMC",
+    "Director": "Vince Gilligan",
+    "Año": "2008",
+    "Terminada": "Si"
+  },
+  {
+    "Titulo": "The Simpsons",
+    "Cadena": "FOX",
+    "Director": "Matt Groening",
+    "Año": "1989",
+    "Terminada": "Si"
+  },
+  {
+    "Titulo": "Chernobyl",
+    "Cadena": "HBO",
+    "Director": "Johan Renck",
+    "Año": "2019",
+    "Terminada": "Sí"
+  },
+  {
+    "Titulo": "Vivir sin permiso",
+    "Cadena": "Telecinco",
+    "Director": "Aitor Gabilondo",
+    "Año": "2018",
+    "Terminada": "No"
+  }
+ ]

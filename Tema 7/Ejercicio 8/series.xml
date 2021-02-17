@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<series>
+    <serie>
+        <Titulo>La casa de papel</Titulo>
+        <Cadena>Netflix</Cadena>
+        <Director>Álex Rodrigo</Director>
+        <Año>2017</Año>
+        <Terminada>No</Terminada>
+    </serie>
+    <serie>
+        <Titulo>Juego de Tronos</Titulo>
+        <Cadena>HBO</Cadena>
+        <Director>David Benioff</Director>
+        <Año>2011</Año>
+        <Terminada>No</Terminada>
+    </serie>
+    <serie>
+        <Titulo>Breaking Bad</Titulo>
+        <Cadena>AMC</Cadena>
+        <Director>Vince Gilligan</Director>
+        <Año>2008</Año>
+        <Terminada>Si</Terminada>
+    </serie>
+    <serie>
+        <Titulo>The Simpsons</Titulo>
+        <Cadena>FOX</Cadena>
+        <Director>Matt Groening</Director>
+        <Año>1989</Año>
+        <Terminada>Si</Terminada>
+    </serie>
+    <serie>
+        <Titulo>Chernobyl</Titulo>
+        <Cadena>HBO</Cadena>
+        <Director>Johan Renck</Director>
+        <Año>2019</Año>
+        <Terminada>Sí</Terminada>
+    </serie>
+    <serie>
+        <Titulo>Vivir sin permiso</Titulo>
+        <Cadena>Telecinco</Cadena>
+        <Director>Aitor Gabilondo</Director>
+        <Año>2018</Año>
+        <Terminada>No</Terminada>
+    </serie>
+</series>

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html><html>	<head><meta charset="UTF-8"></head>
+<body>
+	<div id="display"></div>
+
+	<script type="text/javascript">
+		let display = document.getElementById("display");
+
+		const time = (ms) => new Promise (resolve => setTimeout(resolve, ms));
+
+		const response = (t0) => 
+			new Promise((resolve, reject) =>
+				display.addEventListener('click', () => {
+						let t = new Date().getTime() - t0;
+
+						if (t <= 1000) resolve(t);
+						else           reject(`Too late: ${t}ms`);
+					}
+				)
+			)
+
+		const start = async () => {
+
+			await time(5000*Math.random());
+			display.innerHTML = "Click me in less than 1 second";
+				
+			try {
+				let t = await response(new Date().getTime());
+				display.innerHTML = `Congratulations: ${t}ms`;
+
+			} catch (msg) {
+				display.innerHTML = msg;
+			}
+		}
+
+		start()
+	</script>
+</body>
+</html>
+

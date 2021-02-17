@@ -1,0 +1,33 @@
+
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"></head>
+<body>
+	<div id="d"></div>
+
+	<script type="text/javascript">
+		let d = document.getElementById("d");
+
+		const mi_prom = () => 
+			new Promise( (resolve, reject) => {
+
+				if (Math.random() < 0.5) {
+					resolve("Éxito");
+				}	else {
+					reject("Promesa rechazada");
+				}
+			})
+
+		const start = async () => {
+
+			try {
+				let msg =         await mi_prom();
+				d.innerHTML = msg;
+			} catch (err) {
+				d.innerHTML = err;
+			}
+		}
+
+		start();
+	</script>
+</body></html>
+

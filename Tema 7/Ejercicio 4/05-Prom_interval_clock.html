@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+	<head><meta charset="UTF-8"></head>
+  <body>
+  	<div id="i1"></div>
+
+		<script type="text/javascript">
+
+			const time = (ms) => {
+				return new Promise (resolve => setTimeout(resolve, ms));
+			}
+
+			const start = async () => {
+				while (true) {
+					document.getElementById("i1").innerHTML = new Date();
+				  await time(1000);  // wait 1 second
+				}
+			}
+
+			start()			
+  </body>
+</html>
+
