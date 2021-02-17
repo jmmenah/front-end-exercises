@@ -1,0 +1,105 @@
+window.addEventListener('DOMContentLoaded', () => {
+
+    let form = document.createElement('form');
+
+    let labelNombre = document.createElement('label');
+    let labelNombreText = document.createTextNode('Nombre del grupo:');
+    labelNombre.appendChild(labelNombreText);
+
+    let nombre = document.createElement('input');
+    nombre.setAttribute('type', 'text');
+    nombre.setAttribute('id', 'nombre');
+    nombre.setAttribute('placeholder', 'Nombre del grupo');
+
+
+    let labelCantante = document.createElement('label');
+    let labelCantanteText = document.createTextNode('Grupo de música o cantante:');
+
+    labelCantante.appendChild(labelCantanteText);
+
+    let cantante = document.createElement('input');
+    cantante.setAttribute('type', 'text');
+    cantante.setAttribute('id', 'cantante');
+    cantante.setAttribute('placeholder', 'Grupo de música o cantante');
+
+
+    let labelTipoMusica = document.createElement('label');
+    let labelTipoMusicaText = document.createTextNode('Tipo de música:');
+
+    labelTipoMusica.appendChild(labelTipoMusicaText);
+
+    let tipoMusica = document.createElement('select');
+    tipoMusica.setAttribute('id', 'tipoMusica');
+
+    let opcionesNombre = ['rock', 'pop', 'punk', 'indie'];
+    let opciones = [];
+
+    for (let index = 0; index < opcionesNombre.length; index++) {
+        
+        let opcion = document.createElement('option');
+        opcion.setAttribute('value', opcionesNombre[index]);
+        
+        let opcionTexto = document.createTextNode(opcionesNombre[index]);
+        opcion.appendChild(opcionTexto);
+
+        opciones.push(opcion);
+        
+    }
+
+    tipoMusica.append(...opciones);
+    
+
+    let labelAnioPublicacion = document.createElement('label');
+    let labelAnioPublicacionText = document.createTextNode('Año de publicación:');
+
+    labelAnioPublicacion.appendChild(labelAnioPublicacionText);
+
+    let anioPublicacion = document.createElement('input');
+    anioPublicacion.setAttribute('type', 'number');
+    anioPublicacion.setAttribute('id', 'anioPublicacion');
+	anioPublicacion.setAttribute('min', "1900");
+	anioPublicacion.setAttribute('max', "2100");
+    anioPublicacion.setAttribute('placeholder', 'Año publicación');
+
+
+    let labelLocalizacion = document.createElement('label');
+    let labelLocalizacionText = document.createTextNode('Nº estantería:');
+
+    labelLocalizacion.appendChild(labelLocalizacionText);
+    let localizacion = document.createElement('input');
+    localizacion.setAttribute('type', 'number');
+	localizacion.setAttribute('min', "0");
+	localizacion.setAttribute('max', "100");
+	
+    localizacion.setAttribute('id', 'localizacion');
+    localizacion.setAttribute('placeholder', 'Nº estantería');
+
+
+    let labelPrestado = document.createElement('label');
+    let labelPrestadoText = document.createTextNode('Prestado:');
+
+    labelPrestado.appendChild(labelPrestadoText);
+    let prestado = document.createElement('input');
+    prestado.setAttribute('type', 'checkbox');
+    prestado.setAttribute('id', 'prestado');
+    
+    let content = [
+        labelNombre,
+        nombre,
+        labelCantante,
+        cantante,
+        labelTipoMusica,
+        tipoMusica,
+        labelAnioPublicacion,
+        anioPublicacion,
+        labelLocalizacion,
+        localizacion,
+        labelPrestado,
+        prestado
+    ];
+    
+    form.append(...content);
+
+    document.body.appendChild(form);
+
+});
