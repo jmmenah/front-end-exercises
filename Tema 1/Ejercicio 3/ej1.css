@@ -1,0 +1,10 @@
+form {
+	margin: 0 auto;
+ 	width: 400px;
+	padding: 1em;
+	font: 1em monospace;
+	color: black;
+  	position: absolute;
+  	background-color: #00f03c;
+  	border-radius: 1em;
+}
